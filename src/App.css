@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background: rgba(10, 21,55, 1);
+  height: 100vh;
+  padding-top: 10rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .App-logo {

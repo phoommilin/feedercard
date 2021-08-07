@@ -1,23 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
+import CardStacks from './components/CardStacks';
+import StarLogo from './images/star.png';
+import CoinLogo from './images/coins.png';
+import LayerLogo from './images/layer.png';
+import ShieldLogo from './images/shield.png';
+
+const CardDataList = [
+  {
+    title: 'FEED Staking',
+    topRightText: 'Shares of Platforms',
+    topRightNumber: '0.57%',
+    dataTitle: 'Total Investments',
+    dataNumber:'$ 3,336.56',
+    icon : ShieldLogo,
+  },
+  {
+    title: 'FEED Farming',
+    topRightText: 'Pool Shares',
+    topRightNumber: '3.43%',
+    dataTitle: 'Total Investments',
+    dataNumber:'$ 3,336.56',
+    icon: LayerLogo,
+  },
+  {
+    title: 'Investments',
+    topRightText: 'Average APY',
+    topRightNumber: '15.43%',
+    dataTitle: 'Total Investments',
+    dataNumber:'$ 3,336.56',
+    icon : CoinLogo,
+  },
+  {
+    title: 'Account Summary',
+    topRightText: 'Daily Profit',
+    topRightNumber: '$ 16.75',
+    dataTitle: 'Total Investments',
+    dataNumber:'$ 3,336.56',
+    icon : StarLogo,
+  },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardStacks
+      data={CardDataList}
+      />
     </div>
   );
 }

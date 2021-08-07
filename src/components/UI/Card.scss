@@ -1,0 +1,180 @@
+.card {
+    width: 332px;
+    height: 180px;
+    z-index: 4;
+    // background: transparent;
+    background: rgba(10, 21, 55, 0.1);
+    mix-blend-mode: normal;
+    box-sizing: border-box;
+    backdrop-filter: blur(40px);
+    /* Note: backdrop-filter has minimal browser support */
+        
+    border-radius: 15px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -8rem;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &.active {
+       animation: slideup 1s ease-in-out forwards;
+
+        @keyframes slideup {
+            0% {
+                
+            }
+
+            35% {
+                transform: translateY(-100%) scale(1.15);
+                
+            }
+            
+            75% {
+                transform: translateY(110%);
+            }
+            100% {
+                transform: translateY(100%);
+                z-index: 6;
+            }
+        }
+    }
+
+    .card-icon {
+        opacity: 0.5;
+    }
+
+    .card-title {
+        opacity: 0.5;
+    }
+
+    .card-top-right-title {
+        opacity: 0.5;
+    }
+
+    .card-top-right-number {
+        opacity: 0.5;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+
+        .card-icon {
+            opacity: 1;
+        }
+
+        .card-title {
+            opacity: 1;
+        }
+
+        .card-top-right-number {
+            opacity: 1;
+        }
+
+        .card-top-right-title {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    p {
+        color: white;
+        z-index: 4;
+    }
+
+    .card-content {
+        z-index: 3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 1.125rem;
+        // background: rgba(10, 21, 55, 0.1);
+        // mix-blend-mode: normal;
+        // box-sizing: border-box;
+        // backdrop-filter: blur(40px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 15px;
+    }
+
+    &:hover {
+        
+        // animation: showup 500ms ease-in-out forwards;
+        transform: translateY(-1rem);
+
+        .card-icon {
+            opacity: 1;
+        }
+    
+        .card-title {
+            opacity: 1;
+        }
+    
+        .card-top-right-title {
+            opacity: 1;
+        }
+    
+        .card-top-right-number {
+            opacity: 1;
+        }
+
+        @keyframes showup {
+            0% {
+                transform: translateY(0);
+                
+                .card-content {
+                    transform: translateY(0);
+                }
+
+                .card-icon {
+                    opacity: 1;
+                }
+            
+                .card-title {
+                    opacity: 1;
+                }
+            
+                .card-top-right-title {
+                    opacity: 1;
+                }
+            
+                .card-top-right-number {
+                    opacity: 1;
+                }
+            }
+            100% {
+                
+                transform: translateY(-3rem);
+                
+                .card-content {
+                    transform: translateY(-3rem);
+                }
+
+                .card-icon {
+                    opacity: 1;
+                }
+            
+                .card-title {
+                    opacity: 1;
+                }
+            
+                .card-top-right-title {
+                    opacity: 1;
+                }
+            
+                .card-top-right-number {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
