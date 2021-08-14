@@ -38,7 +38,7 @@ const options = {
     },
     pointBorderColor: "transparent",
     pointBackgroundColor: "transparent",
-    tension: '0.4',
+    tension: '0.2',
     plugins: {
         legend: {
             display: false

@@ -6,36 +6,39 @@
     background: rgba(10, 21, 55, 0.1);
     mix-blend-mode: normal;
     box-sizing: border-box;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(100px);
     /* Note: backdrop-filter has minimal browser support */
         
     border-radius: 15px;
     position: relative;
     margin: 0 auto;
-    margin-top: -8rem;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 
     &.active {
-       animation: slideup 1s ease-in-out forwards;
+       animation: slideup 2s ease-out forwards;
 
         @keyframes slideup {
             0% {
                 
             }
 
+            10% {
+                transform: scale(0.95);
+            }
+
             35% {
-                transform: translateY(-100%) scale(1.15);
+                transform: translateY(-100%) ;
                 
             }
             
             75% {
-                transform: translateY(110%);
+                transform: translateY(110%) scale(1.1);
             }
             100% {
-                transform: translateY(100%);
+                transform: translateY(100%) scale(1);
                 z-index: 6;
             }
         }
